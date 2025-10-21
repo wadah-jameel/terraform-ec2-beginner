@@ -1,0 +1,35 @@
+# terraform.tfvars.example
+# Copy this file to terraform.tfvars and customize the values
+
+# AWS Configuration
+aws_region  = "us-east-1"
+aws_profile = "default"
+
+# EC2 Instance Configuration
+instance_type = "t2.micro"  # Free tier eligible
+key_pair_name = "your-key-pair-name"  # Replace with your actual key pair name
+
+# Network Security
+allowed_cidr = "0.0.0.0/0"  # CHANGE THIS: Use your IP address with /32 for security
+enable_http  = true
+enable_https = false
+
+# Instance Details
+instance_name = "my-terraform-ec2"
+environment   = "dev"  # dev, staging, or prod
+
+# Storage
+root_volume_size = 8  # GB
+
+# Monitoring
+enable_monitoring = false
+
+# Project Information
+project_name = "terraform-learning-project"
+owner        = "your-name"
+
+# Optional: Custom AMI (leave empty to use latest Amazon Linux 2)
+ami_id = ""
+
+# Optional: Custom user data script (leave empty to use default)
+user_data_script = ""
